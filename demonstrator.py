@@ -137,9 +137,9 @@ def make_html_single_car(car, datauri, selected=False):
 def get_gif(car_id):
     # get the path of the GIF matching the car specified in car_id
     car = cars[car_id]
-    car_type = car["path"].split("/")[-1][:-4]
+    car_type = car["name"]
     velocity = car["geschwindigkeit"]
-    path = f"gifs/{car_type}_{velocity}.gif"
+    path = f"gifs/{car['path'].split('/')[-1][:-4]}_{velocity}.gif"
     return car_type, velocity, path
 
 
