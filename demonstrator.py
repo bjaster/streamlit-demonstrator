@@ -30,7 +30,7 @@ def make_html(cars, selected):
         .container {
             display: grid;
             grid-template-columns: repeat(4, minmax(140px, 1fr));
-            gap: 20px;
+            gap: 10px;
             justify-items: stretch;   /* Karten füllen die Spalten */
             justify-content: start;   /* Grid klebt links */
             width: 100% !important;   /* volle Breite nutzen */
@@ -46,7 +46,7 @@ def make_html(cars, selected):
         }
         
         .card img { 
-            width: 90px; 
+            width: 80px; 
             height: auto; 
             display: block; 
             margin: 0 auto 2px; 
@@ -87,7 +87,7 @@ def make_html_single_car(car, datauri, selected=False):
             .container {
                 display: grid;
                 grid-template-columns: repeat(4, minmax(140px, 1fr));
-                gap: 20px;
+                gap: 10px;
                 justify-items: stretch;   /* Karten füllen die Spalten */
                 justify-content: start;   /* Grid klebt links */
                 width: 100% !important;   /* volle Breite nutzen */
@@ -103,7 +103,7 @@ def make_html_single_car(car, datauri, selected=False):
             }
     
             .card img { 
-                width: 90px; 
+                width: 80px; 
                 height: auto; 
                 display: block; 
                 margin: 0 auto 2px; 
@@ -834,7 +834,6 @@ if st.session_state.confirmed and not st.session_state.show_plot:
 # -----------------------------
 # train ML model
 # -----------------------------
-
 
 if st.session_state.confirmed and st.session_state.show_plot:
     # get training data
